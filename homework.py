@@ -1,3 +1,5 @@
+import sys
+
 def file_to_dictionary(file_path):
     my_dict = {}
     with open(file_path) as file:
@@ -20,12 +22,15 @@ def count_word_in_file(file_name, num_of_words):
         print(f"{word}: {count}")
 
 
-
-
-
 def main():
-    #constants
-    num_of_words = 2 # number of most frequent words to print
+    if len(sys.argv) > 1:
+        try:
+            num_of_words = int(sys.argv[1])
+        except ValueError:
+            raise Exception("num_of_words must be an integer")
+    else:
+        raise Exception("Enter num_of_words as a command-line argument")
+
 
     #variables
     file_path = input("Enter the file path: ")
