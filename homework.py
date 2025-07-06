@@ -34,7 +34,6 @@ def main():
 
     #variables
     file_path = input("Enter the file path: ")
-    file_path = "C:/Users/ASUS/PycharmProjects/PythonProject55/test.txt" # Just for testing, remove this line when you run the program
     count_word_in_file(file_path, num_of_words)
 
 
